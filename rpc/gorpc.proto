@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package gorpc;
+
+service GoRpc {
+    rpc GetSample(SampleReq) returns (SampleRes) {}
+}
+
+message SampleReq {
+    int32 id = 1;
+    string name = 2;
+}
+
+message SampleRes {
+    string mes = 1;
+}
