@@ -9,6 +9,7 @@ import (
 	pb "github.com/midorigreen/goRpc/rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+	"fmt"
 )
 
 const (
@@ -19,6 +20,8 @@ type server struct {
 }
 
 func (g *server) GetSample(ctx context.Context, in *pb.SampleReq) (*pb.SampleRes, error) {
+	fmt.Printf("id : %d", in.Id)
+	fmt.Printf("name : %s", in.Name)
 	return &pb.SampleRes{Mes: "message"}, nil
 }
 

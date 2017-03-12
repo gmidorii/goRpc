@@ -11,6 +11,7 @@ import (
 const (
 	server = "localhost:8888"
 )
+
 func main() {
 	conn, err := grpc.Dial(server, grpc.WithInsecure())
 	if err != nil {
