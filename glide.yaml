@@ -1,0 +1,13 @@
+package: github.com/midorigreen/goRpc
+import:
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: ^1.0.5
+  subpackages:
+  - reflection
+- package: github.com/sirupsen/logrus
