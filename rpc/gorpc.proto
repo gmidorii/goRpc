@@ -6,9 +6,17 @@ service GoRpc {
     rpc GetSample(SampleReq) returns (SampleRes) {}
 }
 
+enum Juice {
+    calpis = 0;
+    soda = 1;
+    fanta = 2;
+    coke = 3;
+}
+
 message SampleReq {
     int32 id = 1;
     string name = 2;
+    Juice juice = 3;
 }
 
 message SampleRes {
