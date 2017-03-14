@@ -17,6 +17,7 @@ message SampleReq {
     int32 id = 1;
     string name = 2;
     Juice juice = 3;
+    repeated string slice = 4;
 }
 
 message SampleRes {
