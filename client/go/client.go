@@ -24,6 +24,7 @@ func main() {
 		Id: 1,
 		Name: "name",
 		Juice: pb.Juice_soda,
+		Slice: []string{"1", "2", "3"},
 	}
 	r, err := c.GetSample(context.Background(), &req)
 	if err != nil {

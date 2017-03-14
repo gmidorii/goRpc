@@ -24,6 +24,7 @@ func (g *server) GetSample(ctx context.Context, in *pb.SampleReq) (*pb.SampleRes
 		"id" : in.Id,
 		"name": in.Name,
 		"juice": in.Juice,
+		"slice": in.Slice,
 	}).Info("request parameter")
 	return &pb.SampleRes{Mes: "Hi! " + in.Name}, nil
 }
