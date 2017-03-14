@@ -20,7 +20,12 @@ func main() {
 	defer conn.Close()
 	c := pb.NewGoRpcClient(conn)
 
-	r, err := c.GetSample(context.Background(), &pb.SampleReq{Id: 1, Name: "hoge"})
+	req := pb.SampleReq{
+		Id: 1,
+		Name: "name",
+		Juice: pb.Juice_soda,
+	}
+	r, err := c.GetSample(context.Background(), &req)
 	if err != nil {
 		log.Fatalf("Failed get sample : %v", err)
 	}

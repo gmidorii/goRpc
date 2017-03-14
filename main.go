@@ -23,6 +23,7 @@ func (g *server) GetSample(ctx context.Context, in *pb.SampleReq) (*pb.SampleRes
 	logrus.WithFields(logrus.Fields{
 		"id" : in.Id,
 		"name": in.Name,
+		"juice": in.Juice,
 	}).Info("request parameter")
 	return &pb.SampleRes{Mes: "Hi! " + in.Name}, nil
 }
